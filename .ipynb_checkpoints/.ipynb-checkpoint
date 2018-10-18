@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 13,
    "metadata": {},
    "outputs": [
     {
@@ -11,26 +11,29 @@
        "3"
       ]
      },
-     "execution_count": 1,
+     "execution_count": 13,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
    "source": [
-    "def count(list):\n",
+    "def count(sequence):\n",
     "    x = []\n",
-    "    for element in list:\n",
-    "        x = int(len([x for x in list if x > 0]))\n",
+    "    if type(sequence) != list:\n",
+    "        raise TypeError(\"this is not a list\")\n",
+    "    for element in sequence:\n",
+    "        x = int(len([x for x in sequence if x > 0]))\n",
     "        #telling it to return the argument with how many elements are greater than 0 in the list\n",
     "    return x\n",
     "#telling it to end the loop with the outcome of the equation\n",
     "\n",
-    "count([3, 5, 2, -4, -9])\n"
+    "count([3, 5, 2, -4, -9])\n",
+    "\n"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": 14,
    "metadata": {},
    "outputs": [
     {
@@ -39,7 +42,7 @@
        "3"
       ]
      },
-     "execution_count": 2,
+     "execution_count": 14,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -51,14 +54,32 @@
   },
   {
    "cell_type": "code",
-   "execution_count": null,
+   "execution_count": 15,
    "metadata": {},
-   "outputs": [],
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "6"
+      ]
+     },
+     "execution_count": 15,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
    "source": [
     "peach = [12, 4, -12, 90, -2]\n",
     "\n",
     "count(peach + apple)"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
